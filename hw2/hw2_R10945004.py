@@ -62,9 +62,10 @@ RF = 0
 for n in range(len(rn)):
     RF += rn[n]*np.exp(-2j*np.pi*F*(n-k-1))
 RF = np.array(RF)
+
+plt.plot(N,H_d.imag,'r--')
 plt.plot(F,RF.imag)
-plt.plot(N,H_d.imag)
-plt.legend(['R(F)','Hibert_d(F)'])
+plt.legend(['Hibert_d(F)','R(F)'])
 plt.title('frequency response')
 plt.xlabel('F')
 plt.ylabel('amplitude')
